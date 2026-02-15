@@ -6,7 +6,7 @@ Displays a startup screen mimicking [Claude Code](https://github.com/anthropics/
 
 ## Demo
 
-![cluade demo](./docs/cluade_demo.gif)
+![cluade demo](./demo.gif)
 
 ## Install
 

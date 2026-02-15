@@ -3,17 +3,22 @@ package ui
 import (
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/charmbracelet/lipgloss"
 	"github.com/takumines/cluade/internal/terminal"
 )
 
 const (
-	leftPanelWidth    = 27
+	leftPanelWidth     = 27
 	rightPanelMinWidth = 20
-	version           = "v1.0.0"
-	borderTitleOffset = 3 // number of dashes between ╭ and the title
+	borderTitleOffset  = 3 // number of dashes between ╭ and the title
 )
+
+func version() string {
+	now := time.Now()
+	return fmt.Sprintf("v%d.%d.%d", now.Year()%100, int(now.Month()), now.Day())
+}
 
 func buildLeftPanel(username, currentDir string) string {
 	welcome := "Welcome back!"

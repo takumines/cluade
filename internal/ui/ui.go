@@ -34,7 +34,7 @@ func renderTUI() string {
 	panels := buildPanels(username, currentDir)
 	bordered := borderStyle.Render(panels)
 
-	title := "Cluade Code " + version
+	title := "Cluade Code " + version()
 	bordered = embedBorderTitle(bordered, title)
 
 	return lipgloss.NewStyle().Padding(1, 0).Render(bordered)
